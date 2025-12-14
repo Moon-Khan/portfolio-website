@@ -592,3 +592,205 @@ body:hover>#pointer {
   color: #ffffff;
   border-color: #ffffff;
 }
+
+/* Float Animation for Hero Illustration */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-illustration {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Experience Timeline Styles */
+.experience-section {
+  background-color: white;
+  padding: 5vh 0;
+  color: #1B435D;
+}
+
+.experience-heading {
+  text-align: center;
+  color: #1B435D;
+  padding-bottom: 3vh;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 40px;
+  border-left: 3px solid #78BBE6;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FF895D;
+  border: 3px solid #78BBE6;
+  box-shadow: 0 0 0 4px #D5EEFF;
+}
+
+.timeline-content {
+  background-color: #f8f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-date {
+  color: #FF895D;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  color: #1B435D;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.timeline-company {
+  color: #78BBE6;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.timeline-description {
+  color: #78BBE6;
+  line-height: 1.8;
+  padding-left: 20px;
+}
+
+.timeline-description li {
+  margin-bottom: 10px;
+}
+
+/* Certifications Section */
+.certifications-section {
+  background-color: #f8f7f7;
+  padding: 5vh 0;
+}
+
+.certifications-heading {
+  text-align: center;
+  color: #1B435D;
+  padding-bottom: 3vh;
+}
+
+.certification-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 2px solid transparent;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: #78BBE6;
+}
+
+.cert-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.cert-title {
+  color: #1B435D;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  min-height: 60px;
+}
+
+.cert-issuer {
+  color: #78BBE6;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.cert-badge {
+  color: #FF895D;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+
+/* Enhanced Project Cards */
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Icons Enhancement */
+.service-icon {
+  transition: transform 0.3s ease;
+}
+
+.service:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Skill Button Animation */
+.skill-btn {
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.skill-btn:hover {
+  transform: scale(1.05);
+}

@@ -132,3 +132,40 @@ function type() {
 document.addEventListener('DOMContentLoaded', function() {
   setTimeout(type, delaySpeed);
 });
+
+// Intersection Observer for Scroll Animations
+document.addEventListener('DOMContentLoaded', function() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe timeline items
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
+  });
+
+  // Observe certification cards
+  document.querySelectorAll('.certification-card').forEach(card => {
+    observer.observe(card);
+  });
+
+  // Observe project cards
+  document.querySelectorAll('.project').forEach(project => {
+    observer.observe(project);
+  });
+
+  // Observe service items
+  document.querySelectorAll('.service').forEach(service => {
+    observer.observe(service);
+  });
+});
